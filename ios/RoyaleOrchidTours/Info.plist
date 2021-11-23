@@ -51,5 +51,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+    <key>NSCameraUsageDescription</key>
+    <string>Allow $(PRODUCT_NAME) to use the camera</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow $(PRODUCT_NAME) to use the microphone</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Give $(PRODUCT_NAME) permission to access your photos</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Give $(PRODUCT_NAME) permission to save photos</string>
 </dict>
 </plist>
