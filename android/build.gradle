@@ -8,6 +8,11 @@ buildscript {
         targetSdkVersion = 30
         ndkVersion = "21.4.7075529"
         androidXCore = "1.7.0" // <- @react-native-community/netinfo
+
+        firebaseIidVersion = "19.0.1" // <- react-native-device-info
+        supportLibVersion = '1.0.2' // <- react-native-device-info
+        mediaCompatVersion = '1.0.1' // <- react-native-device-info
+        supportV4Version = '1.0.0' // <- react-native-device-info
     }
     repositories {
         google()

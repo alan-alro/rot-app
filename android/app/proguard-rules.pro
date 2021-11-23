@@ -8,3 +8,10 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+-keep public class com.horcrux.svg.** {*;} # <- react-native-svg
+
+-keep class com.google.android.gms.common.** {*;} # <- react-native-device-info
+-keepclassmembers class com.android.installreferrer.api.** { # <- react-native-device-info
+  *;
+}
