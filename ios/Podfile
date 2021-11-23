@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '12.0'
 
-target 'RoyaleorchidTours' do
+target 'RoyaleOrchidTours' do
   use_expo_modules!
   config = use_native_modules!
 
@@ -14,7 +14,7 @@ target 'RoyaleorchidTours' do
     :hermes_enabled => false
   )
 
-  target 'RoyaleorchidToursTests' do
+  target 'RoyaleOrchidToursTests' do
     inherit! :complete
     # Pods for testing
   end
