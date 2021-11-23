@@ -1,4 +1,4 @@
-package com.royaleorchidtours.app;
+package com.royaleorchidtours;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "RoyaleorchidTours";
+    return "RoyaleOrchidTours";
   }
 }
