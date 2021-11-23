@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
+    "android": "npx react-native run-android",
+    "ios": "npx react-native run-ios",
+    "start": "npx react-native start",
+    "pod": "npx pod-install ios",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -16,6 +17,9 @@
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
     "apisauce": "^2.1.2",
+    "appcenter": "^4.3.0",
+    "appcenter-analytics": "^4.3.0",
+    "appcenter-crashes": "^4.3.0",
     "easy-peasy": "^5.0.4",
     "expo": "^43.0.3",
     "expo-battery": "~6.0.3",
