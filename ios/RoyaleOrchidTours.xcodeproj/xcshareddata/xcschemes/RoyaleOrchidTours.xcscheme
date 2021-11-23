@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "asdf.app"
-               BlueprintName = "asdf"
-               ReferencedContainer = "container:asdf.xcodeproj">
+               BuildableName = "RoyaleOrchidTours.app"
+               BlueprintName = "RoyaleOrchidTours"
+               ReferencedContainer = "container:RoyaleOrchidTours.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "asdfTests.xctest"
-               BlueprintName = "asdfTests"
-               ReferencedContainer = "container:asdf.xcodeproj">
+               BuildableName = "RoyaleOrchidToursTests.xctest"
+               BlueprintName = "RoyaleOrchidToursTests"
+               ReferencedContainer = "container:RoyaleOrchidTours.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "asdf.app"
-            BlueprintName = "asdf"
-            ReferencedContainer = "container:asdf.xcodeproj">
+            BuildableName = "RoyaleOrchidTours.app"
+            BlueprintName = "RoyaleOrchidTours"
+            ReferencedContainer = "container:RoyaleOrchidTours.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "asdf.app"
-            BlueprintName = "asdf"
-            ReferencedContainer = "container:asdf.xcodeproj">
+            BuildableName = "RoyaleOrchidTours.app"
+            BlueprintName = "RoyaleOrchidTours"
+            ReferencedContainer = "container:RoyaleOrchidTours.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* asdfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* asdfTests.m */; };
+		00E356F31AD99517003FC87E /* RoyaleOrchidToursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RoyaleOrchidToursTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		377F0F9179C81409F5E23116 /* libPods-asdf-asdfTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4199A1B9F0E03C87D95D4003 /* libPods-asdf-asdfTests.a */; };
+		377F0F9179C81409F5E23116 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4199A1B9F0E03C87D95D4003 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a */; };
 		4645BA1527478810490FCBD3 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A1BEB53CC9769E1F8CBD5 /* ExpoModulesProvider.swift */; };
-		7A35AFEF583A6BE906FEDB5B /* libPods-asdf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 652C8A972A2A23D6789D5F13 /* libPods-asdf.a */; };
+		7A35AFEF583A6BE906FEDB5B /* libPods-RoyaleOrchidTours.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 652C8A972A2A23D6789D5F13 /* libPods-RoyaleOrchidTours.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		867DF0F9C12C7416876B6E40 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FECDCB2F187D036444AB2C /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
@@ -24,30 +24,30 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = asdf;
+			remoteInfo = RoyaleOrchidTours;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* asdfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = asdfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* RoyaleOrchidToursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoyaleOrchidToursTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* asdfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = asdfTests.m; sourceTree = "<group>"; };
-		06C7D6936CB44E815AD3F627 /* Pods-asdf-asdfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asdf-asdfTests.release.xcconfig"; path = "Target Support Files/Pods-asdf-asdfTests/Pods-asdf-asdfTests.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* asdf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asdf.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = asdf/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = asdf/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = asdf/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = asdf/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = asdf/main.m; sourceTree = "<group>"; };
-		22FECDCB2F187D036444AB2C /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-asdf-asdfTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		38446DE2BA0C0AB320BE7F75 /* Pods-asdf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asdf.release.xcconfig"; path = "Target Support Files/Pods-asdf/Pods-asdf.release.xcconfig"; sourceTree = "<group>"; };
-		4199A1B9F0E03C87D95D4003 /* libPods-asdf-asdfTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-asdf-asdfTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B5A1BEB53CC9769E1F8CBD5 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-asdf/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		652C8A972A2A23D6789D5F13 /* libPods-asdf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-asdf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = asdf/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A20E03F1EC1D934B87C31BAA /* Pods-asdf-asdfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asdf-asdfTests.debug.xcconfig"; path = "Target Support Files/Pods-asdf-asdfTests/Pods-asdf-asdfTests.debug.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* RoyaleOrchidToursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoyaleOrchidToursTests.m; sourceTree = "<group>"; };
+		06C7D6936CB44E815AD3F627 /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* RoyaleOrchidTours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoyaleOrchidTours.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RoyaleOrchidTours/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RoyaleOrchidTours/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RoyaleOrchidTours/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RoyaleOrchidTours/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RoyaleOrchidTours/main.m; sourceTree = "<group>"; };
+		22FECDCB2F187D036444AB2C /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		38446DE2BA0C0AB320BE7F75 /* Pods-RoyaleOrchidTours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours.release.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours.release.xcconfig"; sourceTree = "<group>"; };
+		4199A1B9F0E03C87D95D4003 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5A1BEB53CC9769E1F8CBD5 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RoyaleOrchidTours/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		652C8A972A2A23D6789D5F13 /* libPods-RoyaleOrchidTours.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoyaleOrchidTours.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RoyaleOrchidTours/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A20E03F1EC1D934B87C31BAA /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.debug.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FD36F0CE1331B0B9D7AFA113 /* Pods-asdf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asdf.debug.xcconfig"; path = "Target Support Files/Pods-asdf/Pods-asdf.debug.xcconfig"; sourceTree = "<group>"; };
+		FD36F0CE1331B0B9D7AFA113 /* Pods-RoyaleOrchidTours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours.debug.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				377F0F9179C81409F5E23116 /* libPods-asdf-asdfTests.a in Frameworks */,
+				377F0F9179C81409F5E23116 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,20 +63,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A35AFEF583A6BE906FEDB5B /* libPods-asdf.a in Frameworks */,
+				7A35AFEF583A6BE906FEDB5B /* libPods-RoyaleOrchidTours.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* asdfTests */ = {
+		00E356EF1AD99517003FC87E /* RoyaleOrchidToursTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* asdfTests.m */,
+				00E356F21AD99517003FC87E /* RoyaleOrchidToursTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = asdfTests;
+			path = RoyaleOrchidToursTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -87,15 +87,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0F58C1328E3964074FA77E4C /* asdf */ = {
+		0F58C1328E3964074FA77E4C /* RoyaleOrchidTours */ = {
 			isa = PBXGroup;
 			children = (
 				4B5A1BEB53CC9769E1F8CBD5 /* ExpoModulesProvider.swift */,
 			);
-			name = asdf;
+			name = RoyaleOrchidTours;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* asdf */ = {
+		13B07FAE1A68108700A75B9A /* RoyaleOrchidTours */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -105,16 +105,16 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = asdf;
+			name = RoyaleOrchidTours;
 			sourceTree = "<group>";
 		};
 		16493041994CF52439EF9868 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FD36F0CE1331B0B9D7AFA113 /* Pods-asdf.debug.xcconfig */,
-				38446DE2BA0C0AB320BE7F75 /* Pods-asdf.release.xcconfig */,
-				A20E03F1EC1D934B87C31BAA /* Pods-asdf-asdfTests.debug.xcconfig */,
-				06C7D6936CB44E815AD3F627 /* Pods-asdf-asdfTests.release.xcconfig */,
+				FD36F0CE1331B0B9D7AFA113 /* Pods-RoyaleOrchidTours.debug.xcconfig */,
+				38446DE2BA0C0AB320BE7F75 /* Pods-RoyaleOrchidTours.release.xcconfig */,
+				A20E03F1EC1D934B87C31BAA /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.debug.xcconfig */,
+				06C7D6936CB44E815AD3F627 /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -123,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				652C8A972A2A23D6789D5F13 /* libPods-asdf.a */,
-				4199A1B9F0E03C87D95D4003 /* libPods-asdf-asdfTests.a */,
+				652C8A972A2A23D6789D5F13 /* libPods-RoyaleOrchidTours.a */,
+				4199A1B9F0E03C87D95D4003 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,8 +132,8 @@
 		371C6394B3939461AC59034F /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
-				0F58C1328E3964074FA77E4C /* asdf */,
-				C3CEC3106D0CEDCC2880713A /* asdfTests */,
+				0F58C1328E3964074FA77E4C /* RoyaleOrchidTours */,
+				C3CEC3106D0CEDCC2880713A /* RoyaleOrchidToursTests */,
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* asdf */,
+				13B07FAE1A68108700A75B9A /* RoyaleOrchidTours */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* asdfTests */,
+				00E356EF1AD99517003FC87E /* RoyaleOrchidToursTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				16493041994CF52439EF9868 /* Pods */,
@@ -164,26 +164,26 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* asdf.app */,
-				00E356EE1AD99517003FC87E /* asdfTests.xctest */,
+				13B07F961A680F5B00A75B9A /* RoyaleOrchidTours.app */,
+				00E356EE1AD99517003FC87E /* RoyaleOrchidToursTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C3CEC3106D0CEDCC2880713A /* asdfTests */ = {
+		C3CEC3106D0CEDCC2880713A /* RoyaleOrchidToursTests */ = {
 			isa = PBXGroup;
 			children = (
 				22FECDCB2F187D036444AB2C /* ExpoModulesProvider.swift */,
 			);
-			name = asdfTests;
+			name = RoyaleOrchidToursTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* asdfTests */ = {
+		00E356ED1AD99517003FC87E /* RoyaleOrchidToursTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "asdfTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RoyaleOrchidToursTests" */;
 			buildPhases = (
 				628E90731D8DC0AB4098BB06 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -197,14 +197,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = asdfTests;
-			productName = asdfTests;
-			productReference = 00E356EE1AD99517003FC87E /* asdfTests.xctest */;
+			name = RoyaleOrchidToursTests;
+			productName = RoyaleOrchidToursTests;
+			productReference = 00E356EE1AD99517003FC87E /* RoyaleOrchidToursTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* asdf */ = {
+		13B07F861A680F5B00A75B9A /* RoyaleOrchidTours */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "asdf" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RoyaleOrchidTours" */;
 			buildPhases = (
 				AAA0CB7C9D77AE06201756DB /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -219,9 +219,9 @@
 			);
 			dependencies = (
 			);
-			name = asdf;
-			productName = asdf;
-			productReference = 13B07F961A680F5B00A75B9A /* asdf.app */;
+			name = RoyaleOrchidTours;
+			productName = RoyaleOrchidTours;
+			productReference = 13B07F961A680F5B00A75B9A /* RoyaleOrchidTours.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "asdf" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RoyaleOrchidTours" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -254,8 +254,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* asdf */,
-				00E356ED1AD99517003FC87E /* asdfTests */,
+				13B07F861A680F5B00A75B9A /* RoyaleOrchidTours */,
+				00E356ED1AD99517003FC87E /* RoyaleOrchidToursTests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,15 +300,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-asdf/Pods-asdf-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-asdf/Pods-asdf-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-asdf/Pods-asdf-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		13320A0DF9078753C384BA65 /* [CP] Copy Pods Resources */ = {
@@ -317,15 +317,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-asdf-asdfTests/Pods-asdf-asdfTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-asdf-asdfTests/Pods-asdf-asdfTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-asdf-asdfTests/Pods-asdf-asdfTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5529D3F1C0B50FFB58C2F616 /* [CP] Embed Pods Frameworks */ = {
@@ -334,15 +334,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-asdf-asdfTests/Pods-asdf-asdfTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-asdf-asdfTests/Pods-asdf-asdfTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-asdf-asdfTests/Pods-asdf-asdfTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		628E90731D8DC0AB4098BB06 /* [CP] Check Pods Manifest.lock */ = {
@@ -360,7 +360,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-asdf-asdfTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -382,7 +382,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-asdf-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RoyaleOrchidTours-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -395,15 +395,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-asdf/Pods-asdf-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-asdf/Pods-asdf-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-asdf/Pods-asdf-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -432,7 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* asdfTests.m in Sources */,
+				00E356F31AD99517003FC87E /* RoyaleOrchidToursTests.m in Sources */,
 				867DF0F9C12C7416876B6E40 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +452,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* asdf */;
+			target = 13B07F861A680F5B00A75B9A /* RoyaleOrchidTours */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -460,14 +460,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A20E03F1EC1D934B87C31BAA /* Pods-asdf-asdfTests.debug.xcconfig */;
+			baseConfigurationReference = A20E03F1EC1D934B87C31BAA /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = asdfTests/Info.plist;
+				INFOPLIST_FILE = RoyaleOrchidToursTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -481,17 +481,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/asdf.app/asdf";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoyaleOrchidTours.app/RoyaleOrchidTours";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06C7D6936CB44E815AD3F627 /* Pods-asdf-asdfTests.release.xcconfig */;
+			baseConfigurationReference = 06C7D6936CB44E815AD3F627 /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = asdfTests/Info.plist;
+				INFOPLIST_FILE = RoyaleOrchidToursTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,20 +505,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/asdf.app/asdf";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoyaleOrchidTours.app/RoyaleOrchidTours";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD36F0CE1331B0B9D7AFA113 /* Pods-asdf.debug.xcconfig */;
+			baseConfigurationReference = FD36F0CE1331B0B9D7AFA113 /* Pods-RoyaleOrchidTours.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7WL4Z28D9;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = asdf/Info.plist;
+				INFOPLIST_FILE = RoyaleOrchidTours/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +529,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.royaleorchidtours.app;
-				PRODUCT_NAME = asdf;
+				PRODUCT_NAME = RoyaleOrchidTours;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -538,13 +538,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38446DE2BA0C0AB320BE7F75 /* Pods-asdf.release.xcconfig */;
+			baseConfigurationReference = 38446DE2BA0C0AB320BE7F75 /* Pods-RoyaleOrchidTours.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7WL4Z28D9;
-				INFOPLIST_FILE = asdf/Info.plist;
+				INFOPLIST_FILE = RoyaleOrchidTours/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,7 +555,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.royaleorchidtours.app;
-				PRODUCT_NAME = asdf;
+				PRODUCT_NAME = RoyaleOrchidTours;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -689,7 +689,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "asdfTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RoyaleOrchidToursTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -698,7 +698,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "asdf" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RoyaleOrchidTours" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -707,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "asdf" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RoyaleOrchidTours" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

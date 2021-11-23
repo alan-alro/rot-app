@@ -1,4 +1,4 @@
-package com.asdf;
+package com.royaleorchidtours.app;
 import expo.modules.ReactActivityDelegateWrapper;
 import com.facebook.react.ReactActivityDelegate;
 
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "asdf";
+    return "RoyaleOrchidTours";
   }
 
   @Override
