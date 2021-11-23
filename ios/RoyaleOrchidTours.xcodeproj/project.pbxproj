@@ -13,7 +13,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		71B2F834B8C36E369DAAFCB6 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ABEF6D49A8ED29CB4AE3F44 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8FE8380F655FA1775EF30932 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F549C8E7F3C980D1EBFDC8D /* ExpoModulesProvider.swift */; };
 		DBE8A4894048EE185FDB3B70 /* libPods-RoyaleOrchidTours.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9E76E9A364D7D66715E4F4 /* libPods-RoyaleOrchidTours.a */; };
+		DEA95DD09EEDE963BBCAE836 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75B298E063F03289589A4D /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,10 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RoyaleOrchidTours/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RoyaleOrchidTours/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RoyaleOrchidTours/main.m; sourceTree = "<group>"; };
+		3D75B298E063F03289589A4D /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RoyaleOrchidTours/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		48926E375DC1F5B4A1D5656E /* Pods-RoyaleOrchidTours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours.debug.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours.debug.xcconfig"; sourceTree = "<group>"; };
 		6ABEF6D49A8ED29CB4AE3F44 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F549C8E7F3C980D1EBFDC8D /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		7F9E76E9A364D7D66715E4F4 /* libPods-RoyaleOrchidTours.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoyaleOrchidTours.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RoyaleOrchidTours/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFA7721CADBD5B7858ED7465 /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		38472F0FC1FA38DF0CD9E166 /* RoyaleOrchidToursTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F549C8E7F3C980D1EBFDC8D /* ExpoModulesProvider.swift */,
+			);
+			name = RoyaleOrchidToursTests;
+			sourceTree = "<group>";
+		};
+		6D4747082F14F5F731EB31A1 /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				7A38D9DA0F39F663786FBFC8 /* RoyaleOrchidTours */,
+				38472F0FC1FA38DF0CD9E166 /* RoyaleOrchidToursTests */,
+			);
+			name = ExpoModulesProviders;
+			sourceTree = "<group>";
+		};
+		7A38D9DA0F39F663786FBFC8 /* RoyaleOrchidTours */ = {
+			isa = PBXGroup;
+			children = (
+				3D75B298E063F03289589A4D /* ExpoModulesProvider.swift */,
+			);
+			name = RoyaleOrchidTours;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +151,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				A2EBC4DEC6ED0443B5AE69B8 /* Pods */,
+				6D4747082F14F5F731EB31A1 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -404,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* RoyaleOrchidToursTests.m in Sources */,
+				8FE8380F655FA1775EF30932 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +444,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				DEA95DD09EEDE963BBCAE836 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +469,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RoyaleOrchidToursTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +493,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RoyaleOrchidToursTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,7 +609,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -636,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
