@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface RoyaleOrchidToursTests : XCTestCase
+@interface RoyaleorchidToursTests : XCTestCase
 
 @end
 
-@implementation RoyaleOrchidToursTests
+@implementation RoyaleorchidToursTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {
