@@ -2,7 +2,10 @@ package com.royaleorchidtours.app;
 import expo.modules.ReactActivityDelegateWrapper;
 import com.facebook.react.ReactActivityDelegate;
 
+import android.os.Bundle;
+
 import com.facebook.react.ReactActivity;
+import com.zoontek.rnbootsplash.RNBootSplash;
 
 public class MainActivity extends ReactActivity {
 
@@ -20,5 +23,11 @@ public class MainActivity extends ReactActivity {
     return new ReactActivityDelegateWrapper(this,
       new ReactActivityDelegate(this, getMainComponentName())
     );
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    RNBootSplash.init(R.drawable.bootsplash, MainActivity.this);
   }
 }

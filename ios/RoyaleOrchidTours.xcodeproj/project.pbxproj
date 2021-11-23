@@ -16,6 +16,7 @@
 		7A35AFEF583A6BE906FEDB5B /* libPods-RoyaleOrchidTours.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 652C8A972A2A23D6789D5F13 /* libPods-RoyaleOrchidTours.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		867DF0F9C12C7416876B6E40 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FECDCB2F187D036444AB2C /* ExpoModulesProvider.swift */; };
+		A07331BA274D858D007D5CE5 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07331B9274D858D007D5CE5 /* BootSplash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		4B5A1BEB53CC9769E1F8CBD5 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RoyaleOrchidTours/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		652C8A972A2A23D6789D5F13 /* libPods-RoyaleOrchidTours.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoyaleOrchidTours.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RoyaleOrchidTours/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A07331B9274D858D007D5CE5 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = RoyaleOrchidTours/BootSplash.storyboard; sourceTree = "<group>"; };
 		A20E03F1EC1D934B87C31BAA /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.debug.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FD36F0CE1331B0B9D7AFA113 /* Pods-RoyaleOrchidTours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours.debug.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		13B07FAE1A68108700A75B9A /* RoyaleOrchidTours */ = {
 			isa = PBXGroup;
 			children = (
+				A07331B9274D858D007D5CE5 /* BootSplash.storyboard */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -272,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07331BA274D858D007D5CE5 /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

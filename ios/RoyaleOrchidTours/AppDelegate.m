@@ -8,6 +8,8 @@
 #import <AppCenterReactNativeAnalytics.h>
 #import <AppCenterReactNativeCrashes.h>
 
+#import "RNBootSplash.h"
+
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
 #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -56,6 +58,8 @@ static void InitializeFlipper(UIApplication *application) {
   [AppCenterReactNative register];
   [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
   [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+
+  [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
 
   return YES;
 }
