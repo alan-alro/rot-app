@@ -46,7 +46,7 @@ const VerifyEmailForm = ({style, onSuccess, ...props}) => {
             loading={isLoading}
             onPress={verifyEmail}
           >
-            <Icon name="arrow-right-circle" size={18} />
+            <Icon name="arrow-circle-o-right" size={18} />
           </Button>
         }
         afterControl={errorMessage.length > 0 && <TextError>{errorMessage}</TextError>}

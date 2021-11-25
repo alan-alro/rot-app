@@ -17,7 +17,7 @@ const InputPassword = props => {
           style={{width: null, borderTopLeftRadius: 0, borderBottomLeftRadius: 0}}
           onPress={() => setSecureText(!secureText)}
         >
-          <Icon name={secureText ? 'eye' : 'eye-off'} size={18} />
+          <Icon name={secureText ? 'eye' : 'eye-slash'} size={18} />
         </Button>
       }
       controlStyle={{flexDirection: 'row', alignItems: 'center', marginTop: -5}}

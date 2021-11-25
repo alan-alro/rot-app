@@ -42,7 +42,7 @@ const LoginScreen = ({navigation, route}) => {
         />
         <Holder>
           <Link onPress={() => navigation.goBack()} style={styles.link} textStyle={styles.linkText}>
-            <Icon name="chevrons-left" /> Back
+            <Icon name="angle-left" /> Back
           </Link>
         </Holder>
       </View>

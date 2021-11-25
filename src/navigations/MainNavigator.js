@@ -1,4 +1,5 @@
 import React from 'react';
+import {Platform} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import ToursNavigator from '~navigations/ToursNavigator';
 import PlacesNavigator from '~navigations/PlacesNavigator';
@@ -14,6 +15,8 @@ const MainNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
+        // tabBarStyle: {height: Platform.OS == 'ios' ? 80 : 60},
+        // tabBarItemStyle: {height: 50, flex: 1, alignItems: 'center'},
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
 

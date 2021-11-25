@@ -115,7 +115,7 @@ const styles = EStyleSheet.create({
     borderRadius: 5,
     height: 35,
     paddingHorizontal: 10,
-    paddingVertical: 5,
+    paddingVertical: 0,
     fontSize: themes.inputFontSize,
     fontFamily: themes.baseFontFamily,
     color: colors.darkGrey,
