@@ -25,8 +25,8 @@ const EmailScreen = ({navigation}) => {
         <VerifyEmailForm style={styles.form} onSuccess={onSuccess} />
         <Divider style={styles.devider} color={colors.secondary} text="or" />
         <Holder>
-          <Button>Login with tour code</Button>
-          <Button>Login as guilde</Button>
+          <Button onPress={() => navigation.navigate('CodeLogin')}>Login with tour code</Button>
+          <Button onPress={() => navigation.navigate('GuideLogin')}>Login as guide</Button>
         </Holder>
       </View>
     </AuthScreen>

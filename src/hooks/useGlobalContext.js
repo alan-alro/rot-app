@@ -5,6 +5,7 @@ import produce from 'immer';
 
 const initialState = {
   loggedIn: false,
+  deviceToken: '',
   accessToken: '',
   currentUser: {},
 };
@@ -17,7 +18,7 @@ const {
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
-    // (async () => setState({...state, ...JSON.parse(await AsyncStorage.getItem('cached'))}))();
+    (async () => setState({...state, ...JSON.parse(await AsyncStorage.getItem('cached'))}))();
   }, []);
 
   useEffect(() => {

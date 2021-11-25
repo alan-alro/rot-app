@@ -9,13 +9,20 @@ import {GlobalStateProvider} from '~hooks/useGlobalContext';
 EStyleSheet.build();
 
 const App = () => {
-  const isAppReadied = useAppReadied();
-
   useEffect(() => {
     RNBootSplash.hide({fade: true});
   }, []);
 
-  return <GlobalStateProvider>{isAppReadied ? <RootNavigator /> : <SplashScreen />}</GlobalStateProvider>;
+  return (
+    <GlobalStateProvider>
+      <InnerApp />
+    </GlobalStateProvider>
+  );
+};
+
+const InnerApp = () => {
+  const isAppReadied = useAppReadied();
+  return isAppReadied ? <RootNavigator /> : <SplashScreen />;
 };
 
 export default App;

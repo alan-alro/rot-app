@@ -32,7 +32,13 @@ const RegisterScreen = ({navigation, route}) => {
     <AuthScreen>
       <View style={styles.wrapper}>
         <TextSmall>Some text here like "You do not have an account yet, create one to start."</TextSmall>
-        <PasswordForm email={route.params.email} style={styles.form} onSubmit={onSubmit} onSuccess={onSuccess} />
+        <PasswordForm
+          email={route.params.email}
+          style={styles.form}
+          onSubmit={onSubmit}
+          onSuccess={onSuccess}
+          submitText="Create Account"
+        />
         <Holder>
           <Link onPress={() => navigation.goBack()} style={styles.link} textStyle={styles.linkText}>
             <Icon name="chevrons-left" /> Back

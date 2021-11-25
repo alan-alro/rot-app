@@ -2,9 +2,9 @@ import React from 'react';
 import {View} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {useGlobalState} from '~hooks/useGlobalContext';
-import Api, {apiClient} from '~libraries/Api';
+import Api from '~libraries/Api';
 import AuthScreen from '~components/layouts/AuthScreen';
-import PasswordForm from '~components/forms/PasswordForm';
+import TourCodeForm from '~components/forms/TourCodeForm';
 import Divider from '~components/Divider';
 import Holder from '~components/Holder';
 import Icon from '~elements/Icon';
@@ -13,7 +13,7 @@ import TextSmall from '~elements/TextSmall';
 import Link from '~elements/Link';
 import colors from '~configs/colors';
 
-const LoginScreen = ({navigation, route}) => {
+const CodeLoginScreen = ({navigation}) => {
   const [loggedIn, setLoggedIn] = useGlobalState('loggedIn');
   const [currentUser, setCurrentUser] = useGlobalState('currentUser');
   const [accessToken, setAccessToken] = useGlobalState('accessToken');
@@ -22,24 +22,15 @@ const LoginScreen = ({navigation, route}) => {
     setLoggedIn(true);
     setCurrentUser(data.user);
     setAccessToken(data.access_token);
-    apiClient.setHeader('x-rot-auth-token', data.access_token);
-  };
-
-  const onSubmit = post => {
-    return Api('/auth/login', post);
   };
 
   return (
     <AuthScreen>
       <View style={styles.wrapper}>
-        <TextSmall>Some text here like "You do not have an account yet, create one to start."</TextSmall>
-        <PasswordForm
-          email={route.params.email}
-          style={styles.form}
-          onSubmit={onSubmit}
-          onSuccess={onSuccess}
-          submitText="Login"
-        />
+        <TextSmall>
+          Some text here like "If your email are not in our system yet, ask your tour leader for access code."
+        </TextSmall>
+        <TourCodeForm style={styles.form} onSuccess={onSuccess} />
         <Holder>
           <Link onPress={() => navigation.goBack()} style={styles.link} textStyle={styles.linkText}>
             <Icon name="chevrons-left" /> Back
@@ -61,4 +52,4 @@ const styles = EStyleSheet.create({
   linkText: {fontSize: 14},
 });
 
-export default LoginScreen;
+export default CodeLoginScreen;

@@ -10,7 +10,7 @@ import InputPassword from '~elements/InputPassword';
 import Icon from '~elements/Icon';
 import TextError from '~elements/TextError';
 
-const PasswordForm = ({style, onSuccess, onSubmit, email, ...props}) => {
+const PasswordForm = ({style, onSuccess, onSubmit, email, submitText, ...props}) => {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -41,9 +41,9 @@ const PasswordForm = ({style, onSuccess, onSubmit, email, ...props}) => {
         onSubmitEditing={verifyPassword}
         afterControl={errorMessage.length > 0 && <TextError>{errorMessage}</TextError>}
       />
-      <Holder style={{marginTop: 10}}>
+      <Holder style={{marginTop: 20}}>
         <Button onPress={verifyPassword} disabled={isLoading || password.length == 0} loading={isLoading}>
-          Create Account
+          {submitText}
         </Button>
       </Holder>
     </View>

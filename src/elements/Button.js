@@ -17,7 +17,7 @@ const Button = ({children, disabled, loading, theme, style, textStyle, textProps
   return (
     <Pressable disabled={disabled} style={dynamicStyles} {...props}>
       <Text textStyle={dynamicTextStyles} {...textProps}>
-        {loading ? <Loading size="small" /> : children}
+        {loading ? <Loading size="small" color={colors.white} /> : children}
       </Text>
     </Pressable>
   );
@@ -48,6 +48,7 @@ const styles = EStyleSheet.create({
     width: 180,
     height: 35,
     justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
     textTransform: 'uppercase',
