@@ -65,6 +65,7 @@
 	<array>
 		<string>PragatiNarrow-Bold.ttf</string>
 		<string>PragatiNarrow-Regular.ttf</string>
+        <string>FontAwesome.ttf</string>
 	</array>
 </dict>
 </plist>

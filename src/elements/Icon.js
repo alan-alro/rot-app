@@ -1,8 +1,8 @@
 import React from 'react';
-import Feather from 'react-native-vector-icons/Feather';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const Icon = props => {
-  return <Feather {...props} />;
+  return <FontAwesome {...props} />;
 };
 
 export default Icon;
