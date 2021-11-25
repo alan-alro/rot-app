@@ -38,7 +38,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Allow $(PRODUCT_NAME) to use the camera</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow $(PRODUCT_NAME) to use the microphone</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
@@ -59,7 +59,12 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-    <key>CodePushDeploymentKey</key>
-    <string>jLbOTNlukRumqSXrobSwg0WW7WQR-pRbdpesI</string>
+	<key>CodePushDeploymentKey</key>
+	<string>jLbOTNlukRumqSXrobSwg0WW7WQR-pRbdpesI</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PragatiNarrow-Bold.ttf</string>
+		<string>PragatiNarrow-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

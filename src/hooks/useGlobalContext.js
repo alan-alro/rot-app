@@ -4,8 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 
 const initialState = {
-  abc: 123,
-  lists: [],
+  loggedIn: false,
 };
 
 const {
@@ -16,7 +15,7 @@ const {
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
-    (async () => setState({...state, ...JSON.parse(await AsyncStorage.getItem('cached'))}))();
+    // (async () => setState({...state, ...JSON.parse(await AsyncStorage.getItem('cached'))}))();
   }, []);
 
   useEffect(() => {

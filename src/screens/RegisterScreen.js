@@ -2,7 +2,7 @@ import React from 'react';
 import Screen from '~components/layouts/Screen';
 import Text from '~elements/Text';
 
-const SplashScreen = () => {
+const RegisterScreen = () => {
   return (
     <Screen>
       <Text>spalshing</Text>
@@ -10,4 +10,4 @@ const SplashScreen = () => {
   );
 };
 
-export default SplashScreen;
+export default RegisterScreen;

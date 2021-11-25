@@ -2,12 +2,12 @@ import React from 'react';
 import Screen from '~components/layouts/Screen';
 import Text from '~elements/Text';
 
-const SplashScreen = () => {
+const PlaceholderScreen = () => {
   return (
     <Screen>
-      <Text>spalshing</Text>
+      <Text>PlaceholderScreen</Text>
     </Screen>
   );
 };
 
-export default SplashScreen;
+export default PlaceholderScreen;
