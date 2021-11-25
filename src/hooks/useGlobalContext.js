@@ -5,6 +5,8 @@ import produce from 'immer';
 
 const initialState = {
   loggedIn: false,
+  accessToken: '',
+  currentUser: {},
 };
 
 const {

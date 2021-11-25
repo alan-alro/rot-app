@@ -10,11 +10,19 @@ import Button from '~elements/Button';
 import colors from '~configs/colors';
 
 const EmailScreen = ({navigation}) => {
+  const onSuccess = (email, data) => {
+    if (data.has_account) {
+      return navigation.navigate('Login', {email});
+    }
+
+    return navigation.navigate('Register', {email});
+  };
+
   return (
     <AuthScreen>
       <View style={styles.wrapper}>
         <TextSmall>Some text here like "enter your email address that's registered with your tour."</TextSmall>
-        <VerifyEmailForm style={styles.form} />
+        <VerifyEmailForm style={styles.form} onSuccess={onSuccess} />
         <Divider style={styles.devider} color={colors.secondary} text="or" />
         <Holder>
           <Button>Login with tour code</Button>

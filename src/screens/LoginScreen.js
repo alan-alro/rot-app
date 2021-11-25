@@ -5,7 +5,7 @@ import Text from '~elements/Text';
 const LoginScreen = () => {
   return (
     <Screen>
-      <Text>spalshing</Text>
+      <Text>LoginScreen</Text>
     </Screen>
   );
 };

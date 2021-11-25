@@ -13,6 +13,7 @@ const Input = props => {
     hidden,
     disabled,
     required,
+    invalid,
     loading,
     style,
     labelStyle,
@@ -25,12 +26,14 @@ const Input = props => {
     afterControl,
     beforeInput,
     afterInput,
+    setRef,
     ...rest
   } = props;
 
   const [isFocused, setIsFocused] = useState(rest.autoFocus);
-  const editable = true;
+  let editable = true;
   const dynamicStyles = [];
+  const dynamicInputStyles = [];
 
   if (hidden) {
     return null;
@@ -39,20 +42,29 @@ const Input = props => {
   if (disabled) {
     editable = false;
     dynamicStyles.push(styles.disabled);
+    dynamicInputStyles.push(styles.disabledInput);
+  }
+
+  if (invalid) {
+    dynamicStyles.push(styles.invalid);
+    dynamicInputStyles.push(styles.invalidInput);
   }
 
   if (loading) {
     editable = false;
     dynamicStyles.push(styles.loading);
+    dynamicInputStyles.push(styles.loadingInput);
   }
 
   if (disabled) {
     editable = false;
     dynamicStyles.push(styles.disabled);
+    dynamicInputStyles.push(styles.disabledInput);
   }
 
   if (isFocused) {
     dynamicStyles.push(styles.focused);
+    dynamicInputStyles.push(styles.focusedInput);
   }
 
   return (
@@ -77,9 +89,10 @@ const Input = props => {
             returnKeyType: 'done',
             ...rest,
           }}
-          style={[styles.input, inputStyle]}
+          style={[styles.input, ...dynamicInputStyles, inputStyle]}
           onChangeText={onChange}
           value={value}
+          ref={setRef}
         />
         {afterInput}
       </View>
@@ -89,7 +102,7 @@ const Input = props => {
 };
 
 const styles = EStyleSheet.create({
-  wrapper: {marginVertical: 10},
+  wrapper: {marginTop: 10},
   label: {
     letterSpacing: 0.5,
     color: colors.primary,
@@ -100,12 +113,18 @@ const styles = EStyleSheet.create({
     borderWidth: 2,
     borderColor: colors.border,
     borderRadius: 5,
-    height: 40,
+    height: 35,
     paddingHorizontal: 10,
     paddingVertical: 5,
     fontSize: themes.inputFontSize,
     fontFamily: themes.baseFontFamily,
     color: colors.darkGrey,
+  },
+  invalidInput: {
+    borderColor: colors.error,
+  },
+  disabledInput: {
+    backgroundColor: colors.lightGrey,
   },
 });
 

@@ -5,9 +5,9 @@ import Text from '~elements/Text';
 import Loading from '~elements/Loading';
 import colors from '~configs/colors';
 
-const Button = ({children, disabled, loading, theme, style, textStyle, textProps, ...props}) => {
-  const dynamicStyles = [styles.wrapper, getTheme(theme).button, style];
-  const dynamicTextStyles = [styles.text, getTheme(theme).text, textStyle];
+const Link = ({children, disabled, loading, theme, style, textStyle, textProps, ...props}) => {
+  const dynamicStyles = [styles.wrapper, style];
+  const dynamicTextStyles = [styles.text, textStyle];
 
   if (disabled) {
     dynamicStyles.push(styles.disabled);
@@ -23,35 +23,17 @@ const Button = ({children, disabled, loading, theme, style, textStyle, textProps
   );
 };
 
-const getTheme = theme => {
-  switch (theme) {
-    default:
-      return {
-        text: {
-          color: colors.white,
-        },
-        button: {
-          backgroundColor: colors.primary,
-        },
-      };
-  }
-};
-
 const styles = EStyleSheet.create({
   wrapper: {
-    paddingVertical: 5,
-    paddingHorizontal: 10,
-    backgroundColor: colors.red,
-    color: colors.white,
+    paddingHorizontal: 5,
     marginVertical: 5,
     borderRadius: 5,
-    width: 180,
-    height: 35,
     justifyContent: 'center',
   },
   text: {
     textTransform: 'uppercase',
     textAlign: 'center',
+    color: colors.primary,
   },
   disabled: {
     backgroundColor: colors.grey,
@@ -61,4 +43,4 @@ const styles = EStyleSheet.create({
   },
 });
 
-export default Button;
+export default Link;

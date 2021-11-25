@@ -35,7 +35,7 @@
 		00E356EE1AD99517003FC87E /* RoyaleOrchidToursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoyaleOrchidToursTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RoyaleOrchidToursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoyaleOrchidToursTests.m; sourceTree = "<group>"; };
-		02FF3476D82D4258B58B8631 /* PragatiNarrow-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PragatiNarrow-Regular.ttf"; path = "../assets/fonts/PragatiNarrow-Regular.ttf"; sourceTree = "<group>"; };
+		02FF3476D82D4258B58B8631 /* PragatiNarrow-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PragatiNarrow-Regular.ttf"; path = "../assets/fonts/PragatiNarrow-Regular.ttf"; sourceTree = "<group>"; };
 		06C7D6936CB44E815AD3F627 /* Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RoyaleOrchidTours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoyaleOrchidTours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RoyaleOrchidTours/AppDelegate.h; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RoyaleOrchidTours/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RoyaleOrchidTours/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RoyaleOrchidTours/main.m; sourceTree = "<group>"; };
-		1899CFEBCF3249DD88E412AF /* PragatiNarrow-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PragatiNarrow-Bold.ttf"; path = "../assets/fonts/PragatiNarrow-Bold.ttf"; sourceTree = "<group>"; };
+		1899CFEBCF3249DD88E412AF /* PragatiNarrow-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PragatiNarrow-Bold.ttf"; path = "../assets/fonts/PragatiNarrow-Bold.ttf"; sourceTree = "<group>"; };
 		22FECDCB2F187D036444AB2C /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RoyaleOrchidTours-RoyaleOrchidToursTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		38446DE2BA0C0AB320BE7F75 /* Pods-RoyaleOrchidTours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoyaleOrchidTours.release.xcconfig"; path = "Target Support Files/Pods-RoyaleOrchidTours/Pods-RoyaleOrchidTours.release.xcconfig"; sourceTree = "<group>"; };
 		4199A1B9F0E03C87D95D4003 /* libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoyaleOrchidTours-RoyaleOrchidToursTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,7 +185,6 @@
 				02FF3476D82D4258B58B8631 /* PragatiNarrow-Regular.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		C3CEC3106D0CEDCC2880713A /* RoyaleOrchidToursTests */ = {
