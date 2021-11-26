@@ -3,7 +3,7 @@ const colors = {
   black: '#333333',
   grey: '#dedede',
   darkGrey: '#666666',
-  lightGrey: '#eaeaea',
+  lightGrey: '#dedede',
   red: '#cc3300',
   green: '#339900',
   yellow: '#ffcc00',
@@ -19,6 +19,7 @@ export const themed = {
   primary: '#6a449a',
   secondary: '#856bba',
   lightSecondary: '#c4b0ec',
+  headerBackground: '#c4b0ec',
 };
 
 export default {

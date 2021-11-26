@@ -15,7 +15,7 @@ const Divider = ({style, dividerStyle, color, width, text, textStyle}, props) =>
   return (
     <View style={[styles.wrapper, style]} {...props}>
       <View style={dividerStyles}></View>
-      {text.length > 0 && <Text textStyle={[styles.text, textStyle]}>{text}</Text>}
+      {text && text.length > 0 && <Text textStyle={[styles.text, textStyle]}>{text}</Text>}
       <View style={dividerStyles}></View>
     </View>
   );

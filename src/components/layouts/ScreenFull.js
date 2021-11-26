@@ -4,34 +4,28 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import ScreenBase from '~components/layouts/ScreenBase';
 import colors from '~configs/colors';
 
-const ScreenFull = props => {
-  const dynamicStyles = [styles.container];
-
-  if ((props.alignment = 'centered')) {
-    dynamicStyles.push({
-      justifyContent: 'center',
-      alignItems: 'center',
-    });
-  }
-
+const ScreenFull = ({beforeView, afterView, alignment, children, ...props}) => {
   return (
-    <ScreenBase>
+    <ScreenBase wrapperStyle={styles.wrapper} {...props}>
+      {beforeView}
       <ScrollView
-        contentContainerStyle={dynamicStyles}
-        style={styles.view}
+        contentContainerStyle={styles.view}
+        style={styles.scrollView}
         alwaysBounceVertical={false}
         keyboardShouldPersistTaps="handled"
         horizontal={false}
       >
-        {props.children}
+        {children}
       </ScrollView>
+      {afterView}
     </ScreenBase>
   );
 };
 
 const styles = EStyleSheet.create({
-  container: {flexGrow: 1},
-  view: {flex: 1},
+  wrapper: {},
+  scrollView: {},
+  view: {},
 });
 
 export default ScreenFull;

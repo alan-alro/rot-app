@@ -1,21 +1,23 @@
 import React from 'react';
+import {View} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Text from '~elements/Text';
 import colors from '~configs/colors';
 import themes from '~configs/themes';
 
-const TextError = ({children, textStyle, ...props}) => {
+const Tags = ({style, children, evaluator, ...props}) => {
   return (
-    <Text textStyle={[styles.text, textStyle]} {...props}>
+    <View style={[styles.wrapper, style]} {...props}>
       {children}
-    </Text>
+    </View>
   );
 };
 
 const styles = EStyleSheet.create({
-  text: {
-    color: colors.error,
+  wrapper: {
+    flexDirection: 'row',
+    marginBottom: 5,
   },
 });
 
-export default TextError;
+export default Tags;

@@ -15,6 +15,14 @@ const MainNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
+        tabBarStyle: {
+          borderTopRightRadius: 20,
+          borderTopLeftRadius: 20,
+          paddingTop: 7,
+          borderWidth: 1,
+          borderBottomWidth: 0,
+          borderColor: colors.grey,
+        },
         // tabBarStyle: {height: Platform.OS == 'ios' ? 80 : 60},
         // tabBarItemStyle: {height: 50, flex: 1, alignItems: 'center'},
         tabBarIcon: ({focused, color, size}) => {
@@ -43,6 +51,7 @@ const MainNavigator = () => {
         },
         tabBarActiveTintColor: colors.secondary,
         tabBarInactiveTintColor: 'gray',
+        headerShown: false,
       })}
     >
       <Tab.Screen name="Tours" component={ToursNavigator} />

@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const Base = ({style}, props) => {
+const Base = ({style, ...props}) => {
   return <View style={[styles.wrapper, style]} {...props}></View>;
 };
 

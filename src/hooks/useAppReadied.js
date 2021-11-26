@@ -9,14 +9,22 @@ import Api, {apiClient} from '~libraries/Api';
 const useAppReadied = () => {
   const [readied, setReadied] = useState(false);
   const [deviceToken, setDeviceToken] = useGlobalState('deviceToken');
+  const usingInitialState = getGlobalState('usingInitialState');
   const accessToken = getGlobalState('accessToken');
+  const apiUrl = getGlobalState('apiUrl');
 
   useEffect(() => {
     RNBootSplash.hide({fade: true});
   }, []);
 
   useEffect(() => {
+    if (usingInitialState) {
+      return;
+    }
+
     (async () => {
+      if (apiUrl.length > 0) apiClient.setBaseURL(apiUrl);
+      apiClient.setHeader('x-rot-app-version', Constants.nativeAppVersion);
       apiClient.setHeader('x-rot-app-version', Constants.nativeAppVersion);
       apiClient.setHeader('x-rot-app-patch', Constants.nativeBuildVersion);
       apiClient.setHeader('x-rot-app-source', await DeviceInfo.getInstallerPackageName);
@@ -40,7 +48,7 @@ const useAppReadied = () => {
 
       setReadied(true);
     })();
-  }, []);
+  }, [usingInitialState]);
 
   return readied;
 };

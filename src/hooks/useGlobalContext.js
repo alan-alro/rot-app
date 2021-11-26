@@ -4,9 +4,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 
 const initialState = {
+  usingInitialState: true,
   loggedIn: false,
   deviceToken: '',
   accessToken: '',
+  apiUrl: '',
   currentUser: {},
 };
 
@@ -18,10 +20,15 @@ const {
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
-    (async () => setState({...state, ...JSON.parse(await AsyncStorage.getItem('cached'))}))();
+    (async () => setState({...state, ...JSON.parse(await AsyncStorage.getItem('cached')), usingInitialState: false}))();
+    // (async () => setState({...state, usingInitialState: false}))();
   }, []);
 
   useEffect(() => {
+    if (state.usingInitialState) {
+      return;
+    }
+
     AsyncStorage.setItem('cached', JSON.stringify(state));
   }, [state]);
 

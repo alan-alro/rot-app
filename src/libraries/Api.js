@@ -1,18 +1,23 @@
 import {create} from 'apisauce';
 
+export const apiDomain = 'https://5e96-2001-569-7b96-3900-8425-eb5d-e418-284b.ngrok.io';
+
 export const apiClient = create({
-  baseURL: 'https://7d0e-2001-569-7b96-3900-bd96-ec03-6cba-6a47.ngrok.io/rot-api',
+  baseURL: `${apiDomain}/rot-api`,
   headers: {
     'x-rot-app-version': '',
     'x-rot-app-patch': '',
     'x-rot-app-source': '',
     'x-rot-device-token': '',
     'x-rot-auth-token': '',
+    'x-rot-debugging': '1',
   },
 });
 
-export default (url, data) => {
-  return apiClient.post(url, data).then(({status, data}) => {
+export const api = (url, postData) => {
+  return apiClient.post(url, postData).then(({status, data}) => {
     return data;
   });
 };
+
+export default api;

@@ -1,6 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import PlaceholderScreen from '~screens/PlaceholderScreen';
+import ToursListScreen from '~screens/ToursListScreen';
+import TourDetailScreen from '~screens/TourDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,8 +12,8 @@ const ToursNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="AllTours" component={PlaceholderScreen} />
-      <Stack.Screen name="TourDetail" component={PlaceholderScreen} />
+      <Stack.Screen name="ToursList" component={ToursListScreen} />
+      <Stack.Screen name="TourDetail" component={TourDetailScreen} />
     </Stack.Navigator>
   );
 };

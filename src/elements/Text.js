@@ -4,10 +4,18 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import colors from '~configs/colors';
 import themes from '~configs/themes';
 
-const Text = ({children, textStyle, bold}, props) => {
+const Text = ({children, textStyle, bold, evaluator, text, ...props}) => {
+  if (evaluator && evaluator.length == 0) {
+    return null;
+  }
+
+  if (text && text.length == 0) {
+    return null;
+  }
+
   return (
     <RnText style={[styles.text, bold ? styles.bold : null, textStyle]} {...props}>
-      {children}
+      {text ? text : children}
     </RnText>
   );
 };
