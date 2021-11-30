@@ -1,11 +1,10 @@
-import React, {useState, useEffect, createRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Image as RNImage} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import AutoHeightImage from 'react-native-auto-height-image';
 import {apiDomain} from '~libraries/Api';
 
-const Image = ({style, width, height, source, ...props}) => {
-  const isMounted = React.createRef(null);
+const ImageOld = ({style, width, height, source, ...props}) => {
   const [wrapperWidth, setWrapperWidth] = useState(0);
   const [adjustedHeight, setAdjustedHeight] = useState(250);
   const [adjustedWidth, setAdjustedWidth] = useState('auto');
@@ -14,17 +13,11 @@ const Image = ({style, width, height, source, ...props}) => {
   const imageSource = source.uri ? {uri: imageUrl} : source;
 
   useEffect(() => {
-    isMounted.current = true;
-
     if (!wrapperWidth) {
       return;
     }
 
     RNImage.getSize(imageUrl, (imageWidth, imageWHight) => {
-      if (!isMounted.current) {
-        return;
-      }
-
       let newWidth, newHeight;
 
       if (width && !height) {
@@ -46,10 +39,6 @@ const Image = ({style, width, height, source, ...props}) => {
       setAdjustedHeight(newHeight);
       setAdjustedWidth(newWidth);
     });
-
-    return () => {
-      isMounted.current = false;
-    };
   }, [wrapperWidth]);
 
   const onWrapperLayout = event => setWrapperWidth(event.nativeEvent.layout.width);
@@ -71,4 +60,4 @@ const styles = EStyleSheet.create({
   },
 });
 
-export default Image;
+export default ImageOld;

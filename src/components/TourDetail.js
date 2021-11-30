@@ -4,11 +4,13 @@ import {useNavigation} from '@react-navigation/native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {TabView} from 'react-native-tab-view';
 import Holder from '~components/Holder';
-import InfoBox from '~components/InfoBox';
+import TourTabInformation from '~components/TourTabInformation';
+import TourTabItinerary from '~components/TourTabItinerary';
+import TourTabContacts from '~components/TourTabContacts';
+import TourTabResources from '~components/TourTabResources';
 import Button from '~elements/Button';
 import Image from '~elements/Image';
 import Text from '~elements/Text';
-import Html from '~elements/Html';
 import Tags from '~elements/Tags';
 import Tag from '~elements/Tag';
 import Tabs from '~elements/Tabs';
@@ -37,34 +39,12 @@ const TourDetail = ({tour, ...props}) => {
 
         <Divider style={{marginVertical: 25}} />
 
-        <Tabs
-          tabs={{
-            info: {
-              label: 'Infomation',
-              render: null,
-            },
-            itinerary: {
-              label: 'Itinerary',
-              render: null,
-            },
-            contacts: {
-              label: 'Contacts',
-              render: null,
-            },
-            resources: {
-              label: 'Resources',
-              render: null,
-            },
-          }}
-        />
-
-        <InfoBox heading="Tour Highlights" evaluator={tour.acf.long_description}>
-          <Html source={{html: tour.acf.long_description}} />
-        </InfoBox>
-
-        <InfoBox heading="Tour Availability" evaluator={tour.acf.tour_months}>
-          <Html source={{html: `<p>${tour.acf.tour_months.join(', ')}</p>`}} />
-        </InfoBox>
+        <Tabs>
+          <TourTabInformation tabLabel="Infomation" tabKey="info" tour={tour} />
+          <TourTabItinerary tabLabel="Itinerary" tabKey="itinerary" tour={tour} />
+          <TourTabResources tabLabel="Resources" tabKey="resources" tour={tour} />
+          <TourTabContacts tabLabel="Contacts" tabKey="contacts" tour={tour} />
+        </Tabs>
       </View>
     </View>
   );
@@ -74,6 +54,7 @@ const styles = EStyleSheet.create({
   wrapper: {},
   body: {
     padding: 10,
+    // backgroundColor: 'red',
   },
   titleText: {
     marginTop: -10,

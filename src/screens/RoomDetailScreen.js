@@ -8,13 +8,13 @@ import LoadingIndicator from '~components/LoadingIndicator';
 import Link from '~elements/Link';
 import Text from '~elements/Text';
 
-const TourDetailScreen = ({navigation, route}) => {
+const RoomDetailScreen = ({navigation, route}) => {
   const [loaded, setLoaded] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [tour, setTour] = useState(null);
 
   const loadTour = async () => {
-    const data = await Api('/tours/detail', {id: route.params.id});
+    const data = await Api('/tours/detail', {id: route.params.tourId});
     setTour(data.data);
     setLoaded(true);
   };
@@ -31,15 +31,15 @@ const TourDetailScreen = ({navigation, route}) => {
 
   return (
     <ScreenHeader
-      headerText="Tour Detail"
+      headerText="Live Stream"
       showBack
       scrollViewProps={{
         refreshControl: <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />,
       }}
     >
-      {loaded ? <TourDetail tour={tour} /> : <LoadingIndicator />}
+      {loaded ? <Text>{JSON.stringify({...route.params, tour})}</Text> : <LoadingIndicator />}
     </ScreenHeader>
   );
 };
 
-export default TourDetailScreen;
+export default RoomDetailScreen;

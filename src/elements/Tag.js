@@ -5,13 +5,13 @@ import Text from '~elements/Text';
 import colors from '~configs/colors';
 import themes from '~configs/themes';
 
-const Tag = ({children, textStyle, background, color, textProps, evaluator, ...props}) => {
+const Tag = ({children, style, textStyle, background, color, textProps, evaluator, ...props}) => {
   if (evaluator && evaluator.length == 0) {
     return;
   }
 
   return (
-    <View style={[styles.wrapper, background ? {backgroundColor: background} : null]} {...props}>
+    <View style={[styles.wrapper, background ? {backgroundColor: background} : null, style]} {...props}>
       <Text textStyle={[styles.text, color ? {color} : null, textStyle]} {...textProps}>
         {children}
       </Text>

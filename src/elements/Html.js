@@ -10,9 +10,10 @@ const Html = ({evaluator, ...props}) => {
     <RenderHtml
       {...props}
       contentWidth={500}
+      systemFonts={[themes.baseFontFamily]}
       baseStyle={{
         fontFamily: themes.baseFontFamily,
-        fontSize: 14,
+        fontSize: 16,
       }}
     />
   );

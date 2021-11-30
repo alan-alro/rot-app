@@ -2,21 +2,29 @@ import React from 'react';
 import {View} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Text from '~elements/Text';
+import Tags from '~elements/Tags';
+import Tag from '~elements/Tag';
+import Html from '~elements/Html';
 import colors from '~configs/colors';
 import {dropShadow} from '~configs/styles';
 
-const InfoBox = ({style, heading, children, evaluator, ...props}) => {
-  if (evaluator === false || evaluator === undefined || (evaluator && evaluator.length == 0)) {
-    return null;
-  }
-
+const Itinerary = ({style, itinerary, ...props}) => {
   return (
     <View style={[styles.wrapper, style]} {...props}>
-      <View style={styles.headingWrapper}>
-        <Text textStyle={styles.heading} text={heading} />
-        <View style={styles.headingDecoration} />
-      </View>
-      {children}
+      <Tags>
+        <Tag
+          evaluator={itinerary.day_number}
+          background="transparent"
+          textStyle={{
+            color: colors.primary,
+          }}
+        >{`Day ${itinerary.day_number}`}</Tag>
+        <Tag evaluator={itinerary.date}>{itinerary.date}</Tag>
+      </Tags>
+
+      <Text textStyle={styles.heading} bold text={itinerary.location}></Text>
+      <View style={styles.headingDecoration} />
+      <Html source={{html: itinerary.description}} />
     </View>
   );
 };
@@ -34,7 +42,7 @@ const styles = EStyleSheet.create({
   },
   headingWrapper: {marginBottom: 15},
   heading: {
-    fontSize: 20,
+    fontSize: 24,
     color: colors.primary,
   },
   headingDecoration: {
@@ -45,4 +53,4 @@ const styles = EStyleSheet.create({
   },
 });
 
-export default InfoBox;
+export default Itinerary;

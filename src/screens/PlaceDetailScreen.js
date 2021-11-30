@@ -3,43 +3,44 @@ import {FlatList, View, RefreshControl} from 'react-native';
 import {useGlobalState} from '~hooks/useGlobalContext';
 import Api from '~libraries/Api';
 import ScreenHeader from '~components/layouts/ScreenHeader';
-import TourDetail from '~components/TourDetail';
+import PlaceDetail from '~components/PlaceDetail';
 import LoadingIndicator from '~components/LoadingIndicator';
 import Link from '~elements/Link';
 import Text from '~elements/Text';
 
-const TourDetailScreen = ({navigation, route}) => {
+const PlaceDetailScreen = ({navigation, route}) => {
   const [loaded, setLoaded] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-  const [tour, setTour] = useState(null);
+  const [place, setPlace] = useState(null);
 
-  const loadTour = async () => {
-    const data = await Api('/tours/detail', {id: route.params.id});
-    setTour(data.data);
+  const loadPlace = async () => {
+    const data = await Api('/destinations/detail', {id: route.params.id});
+    setPlace(data.data);
+    console.log(JSON.stringify(data.data));
     setLoaded(true);
   };
 
   const onRefresh = async () => {
     setRefreshing(true);
-    await loadTour();
+    await loadPlace();
     setRefreshing(false);
   };
 
   useEffect(() => {
-    loadTour();
+    loadPlace();
   }, [route.params.id]);
 
   return (
     <ScreenHeader
-      headerText="Tour Detail"
+      headerText="Place Detail"
       showBack
       scrollViewProps={{
         refreshControl: <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />,
       }}
     >
-      {loaded ? <TourDetail tour={tour} /> : <LoadingIndicator />}
+      {loaded ? <PlaceDetail place={place} /> : <LoadingIndicator />}
     </ScreenHeader>
   );
 };
 
-export default TourDetailScreen;
+export default PlaceDetailScreen;

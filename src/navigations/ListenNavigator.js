@@ -1,6 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import PlaceholderScreen from '~screens/PlaceholderScreen';
+import RoomsScreen from '~screens/RoomsScreen';
+import RoomDetailScreen from '~screens/RoomDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,8 +12,8 @@ const ListenNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="AllRooms" component={PlaceholderScreen} />
-      <Stack.Screen name="RoomDetail" component={PlaceholderScreen} />
+      <Stack.Screen name="AllRooms" component={RoomsScreen} />
+      <Stack.Screen name="RoomDetail" component={RoomDetailScreen} />
     </Stack.Navigator>
   );
 };

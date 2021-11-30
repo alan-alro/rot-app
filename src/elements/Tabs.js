@@ -2,23 +2,30 @@ import React, {useState} from 'react';
 import {View, Pressable} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Text from '~elements/Text';
+import colors from '~configs/colors';
 
-const Tabs = ({tabs, ...props}) => {
-  const [current, setCurrent] = useState(Object.keys(tabs)[0]);
-  const tabLength = Object.keys(tabs).length;
+const Tabs = ({children, ...props}) => {
+  const [current, setCurrent] = useState(0);
 
   return (
     <View style={styles.wrapper} {...props}>
       <View style={styles.nav}>
-        {Object.entries(tabs).map(([key, tab], index) => {
-          const active = key == current;
+        {children.map((child, index) => {
+          const active = index == current;
           return (
-            <Pressable style={[styles.navItem, active ? styles.navItemActive : null]} key={index}>
-              <Text textStyle={[styles.navItemText, active ? styles.navItemTextActive : null]}>{tab.label}</Text>
+            <Pressable
+              style={[styles.navItem, active ? styles.navItemActive : null]}
+              key={index}
+              onPress={() => setCurrent(index)}
+            >
+              <Text textStyle={[styles.navItemText, active ? styles.navItemTextActive : null]}>
+                {child.props.tabLabel}
+              </Text>
             </Pressable>
           );
         })}
       </View>
+      <View style={styles.tabContent}>{children[current]}</View>
     </View>
   );
 };
@@ -27,12 +34,18 @@ const styles = EStyleSheet.create({
   wrapper: {},
   nav: {
     flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 10,
   },
   navItem: {
     marginRight: 5,
   },
   navItem: {
     marginRight: 5,
+  },
+  navItemActive: {
+    borderBottomWidth: 3,
+    borderBottomColor: colors.primary,
   },
   navItemSeperator: {
     marginRight: 5,

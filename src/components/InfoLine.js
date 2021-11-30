@@ -5,18 +5,23 @@ import Text from '~elements/Text';
 import colors from '~configs/colors';
 import {dropShadow} from '~configs/styles';
 
-const InfoBox = ({style, heading, children, evaluator, ...props}) => {
-  if (evaluator === false || evaluator === undefined || (evaluator && evaluator.length == 0)) {
+const InfoLine = ({style, value, heading, content, evaluator, ...props}) => {
+  if (evaluator && evaluator.length == 0) {
+    return null;
+  }
+
+  if (value && value.length == 0) {
     return null;
   }
 
   return (
     <View style={[styles.wrapper, style]} {...props}>
-      <View style={styles.headingWrapper}>
+      <View style={styles.wrapperLeft}>
         <Text textStyle={styles.heading} text={heading} />
-        <View style={styles.headingDecoration} />
       </View>
-      {children}
+      <View style={styles.wrapperRight}>
+        {content ? content(styles.value) : <Text textStyle={styles.value}>{value}</Text>}
+      </View>
     </View>
   );
 };
@@ -25,24 +30,31 @@ const styles = EStyleSheet.create({
   wrapper: {
     borderWidth: 1,
     borderColor: colors.border,
-    marginVertical: 10,
+    marginVertical: 5,
     borderRadius: 3,
     padding: 10,
     paddingRight: 20,
     backgroundColor: colors.white,
     ...dropShadow,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  headingWrapper: {marginBottom: 15},
+  wrapperLeft: {
+    width: '40%',
+  },
+  wrapperRight: {
+    flex: 1,
+  },
+  headingWrapper: {
+    textAlign: 'right',
+  },
   heading: {
-    fontSize: 20,
+    fontSize: 18,
     color: colors.primary,
   },
-  headingDecoration: {
-    width: 50,
-    height: 1,
-    marginTop: 5,
-    backgroundColor: colors.lightSecondary,
+  value: {
+    textAlign: 'right',
   },
 });
 
-export default InfoBox;
+export default InfoLine;

@@ -3,41 +3,41 @@ import {FlatList, View} from 'react-native';
 import {useGlobalState} from '~hooks/useGlobalContext';
 import Api from '~libraries/Api';
 import ScreenHeader from '~components/layouts/ScreenHeader';
-import TourBox from '~components/TourBox';
+import PlaceBox from '~components/PlaceBox';
 import LoadingIndicator from '~components/LoadingIndicator';
 import Link from '~elements/Link';
 import Text from '~elements/Text';
 
-const ToursListScreen = ({navigation}) => {
+const PlacesListScreen = ({navigation}) => {
   const [loaded, setLoaded] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-  const [type, setType] = useState('all');
-  const [tours, setTours] = useState([]);
+  const [places, setPlaces] = useState([]);
 
-  const loadTours = async () => {
-    const data = await Api('/tours/list', {type});
-    setTours(data.data);
+  const loadPlaces = async () => {
+    const data = await Api('/destinations/list');
+    setPlaces(data.data);
     setLoaded(true);
   };
 
   const onRefresh = async () => {
     setRefreshing(true);
-    await loadTours();
+    await loadPlaces();
     setRefreshing(false);
   };
 
   useEffect(() => {
-    loadTours();
+    loadPlaces();
   }, []);
 
   return (
-    <ScreenHeader noScroll headerText="My Tours">
+    <ScreenHeader noScroll headerText="Places">
       {loaded ? (
         <FlatList
           refreshing={refreshing}
           onRefresh={onRefresh}
-          data={tours}
-          renderItem={({item, index}) => <TourBox tour={item} />}
+          data={places}
+          numColumns={2}
+          renderItem={({item, index}) => <PlaceBox place={item} style={{flex: 1 / 2}} />}
           keyExtractor={item => item.id}
         />
       ) : (
@@ -47,4 +47,4 @@ const ToursListScreen = ({navigation}) => {
   );
 };
 
-export default ToursListScreen;
+export default PlacesListScreen;
