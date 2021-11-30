@@ -29,7 +29,6 @@ const Header = ({headerText, showBack, ...props}) => {
           </Text>
         </DevPanelPressable>
       </View>
-      <Icon name="search" />
     </View>
   );
 };

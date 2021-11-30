@@ -7,7 +7,7 @@ import {apiDomain} from '~libraries/Api';
 const Image = ({style, width, height, source, ...props}) => {
   const isMounted = React.createRef(null);
   const [wrapperWidth, setWrapperWidth] = useState(0);
-  const [adjustedHeight, setAdjustedHeight] = useState(250);
+  const [adjustedHeight, setAdjustedHeight] = useState(150);
   const [adjustedWidth, setAdjustedWidth] = useState('auto');
 
   const imageUrl = (source.uri || source).replace('https://royaleorchidtours.test', apiDomain);

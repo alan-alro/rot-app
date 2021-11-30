@@ -47,6 +47,7 @@
     "react-native-keyboard-manager": "^6.5.4-3",
     "react-native-reanimated": "^2.2.4",
     "react-native-render-html": "^6.3.0",
+    "react-native-restart": "^0.0.22",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.9.0",
     "react-native-snap-carousel": "^3.9.1",

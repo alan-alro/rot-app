@@ -12,6 +12,8 @@ const initialState = {
   currentUser: {},
 };
 
+export const cacheKey = 'cached';
+
 const {
   Provider,
   useTrackedState: trackedStateCallback,
@@ -20,7 +22,7 @@ const {
   const [state, setState] = useState(initialState);
 
   useEffect(() => {
-    (async () => setState({...state, ...JSON.parse(await AsyncStorage.getItem('cached')), usingInitialState: false}))();
+    (async () => setState({...state, ...JSON.parse(await AsyncStorage.getItem(cacheKey)), usingInitialState: false}))();
     // (async () => setState({...state, usingInitialState: false}))();
   }, []);
 
@@ -29,7 +31,7 @@ const {
       return;
     }
 
-    AsyncStorage.setItem('cached', JSON.stringify(state));
+    AsyncStorage.setItem(cacheKey, JSON.stringify(state));
   }, [state]);
 
   return [state, setState];
