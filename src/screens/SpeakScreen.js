@@ -1,45 +1,46 @@
 import React, {useState, useEffect} from 'react';
 import {FlatList, View, RefreshControl} from 'react-native';
-import {useGlobalState} from '~hooks/useGlobalContext';
+import {useGlobalState, getGlobalState} from '~hooks/useGlobalContext';
 import Api from '~libraries/Api';
 import ScreenHeader from '~components/layouts/ScreenHeader';
-import PlaceDetail from '~components/PlaceDetail';
+import TourDetail from '~components/TourDetail';
 import LoadingIndicator from '~components/LoadingIndicator';
 import Link from '~elements/Link';
 import Text from '~elements/Text';
 
-const PlaceDetailScreen = ({navigation, route}) => {
+const SpeakScreen = ({navigation, route}) => {
   const [loaded, setLoaded] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-  const [place, setPlace] = useState(null);
+  const [tour, setTour] = useState(null);
+  const currentUser = getGlobalState('currentUser');
+  console.log(currentUser);
 
-  const loadPlace = async () => {
-    const data = await Api('/destinations/detail', {id: route.params.id});
-    setPlace(data.data);
+  const loadTour = async () => {
+    const data = await Api('/tours/detail', {id: currentUser.meta.tour_id});
+    setTour(data.data);
     setLoaded(true);
   };
 
   const onRefresh = async () => {
     setRefreshing(true);
-    await loadPlace();
+    await loadTour();
     setRefreshing(false);
   };
 
   useEffect(() => {
-    loadPlace();
-  }, [route.params.id]);
+    loadTour();
+  }, []);
 
   return (
     <ScreenHeader
-      headerText="Place Detail"
-      showBack
+      headerText="Live Stream"
       scrollViewProps={{
         refreshControl: <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />,
       }}
     >
-      {loaded ? <PlaceDetail place={place} /> : <LoadingIndicator />}
+      {loaded ? <Text>{JSON.stringify({...route.params, tour})}</Text> : <LoadingIndicator />}
     </ScreenHeader>
   );
 };
 
-export default PlaceDetailScreen;
+export default SpeakScreen;

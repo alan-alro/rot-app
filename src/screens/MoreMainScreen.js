@@ -22,7 +22,7 @@ const MoreMainScreen = ({navigation}) => {
   return (
     <ScreenHeader headerText="More">
       <View style={{padding: 15}}>
-        <NavigationItem screen="Settings" label="Settings" />
+        {/*<NavigationItem screen="Settings" label="Settings" />*/}
         <NavigationItem screen="AboutUs" label="About Us" />
         <NavigationItem screen="TermsAndConditions" label="Terms & Conditions" />
         <NavigationItem screen="HelpsFAQ" label="Helps & FAQs" />

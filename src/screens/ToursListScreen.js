@@ -16,8 +16,8 @@ const ToursListScreen = ({navigation}) => {
 
   const loadTours = async () => {
     const data = await Api('/tours/list', {type});
-    setTours(data.data);
     setLoaded(true);
+    setTours(data.data);
   };
 
   const onRefresh = async () => {

@@ -3,19 +3,19 @@ import {FlatList, ScrollView, RefreshControl} from 'react-native';
 import {useGlobalState} from '~hooks/useGlobalContext';
 import Api from '~libraries/Api';
 import ScreenHeader from '~components/layouts/ScreenHeader';
-import StreamBox from '~components/StreamBox';
+import ChatBox from '~components/ChatBox';
 import LoadingIndicator from '~components/LoadingIndicator';
 import Link from '~elements/Link';
 import Text from '~elements/Text';
 
-const RoomsScreen = ({navigation}) => {
+const ChatListsScreen = ({navigation}) => {
   const [loaded, setLoaded] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [rooms, setRooms] = useState([]);
 
   const loadTours = async () => {
     // const data = await Api('/tours/list', {type: 'active'});
-    const data = await Api('/streams/list', {type: 'active'});
+    const data = await Api('/chats/list', {type: 'all'});
     setRooms(data.data);
     setLoaded(true);
   };
@@ -31,14 +31,14 @@ const RoomsScreen = ({navigation}) => {
   }, []);
 
   return (
-    <ScreenHeader noScroll headerText="Live Streams">
+    <ScreenHeader noScroll headerText="Chat Groups">
       {loaded ? (
         rooms.length > 0 ? (
           <FlatList
             refreshing={refreshing}
             onRefresh={onRefresh}
             data={rooms}
-            renderItem={({item, index}) => <StreamBox tour={item} />}
+            renderItem={({item, index}) => <ChatBox tour={item} />}
             keyExtractor={item => item.id}
           />
         ) : (
@@ -46,7 +46,7 @@ const RoomsScreen = ({navigation}) => {
             contentContainerStyle={{padding: 15}}
             refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
           >
-            <Text>No streams available at the moment</Text>
+            <Text>No chat rooms available at the moment</Text>
           </ScrollView>
         )
       ) : (
@@ -56,4 +56,4 @@ const RoomsScreen = ({navigation}) => {
   );
 };
 
-export default RoomsScreen;
+export default ChatListsScreen;

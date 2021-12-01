@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {useGlobalState} from '~hooks/useGlobalContext';
-import Api from '~libraries/Api';
+import Api, {apiClient} from '~libraries/Api';
 import AuthScreen from '~components/layouts/AuthScreen';
 import TourCodeForm from '~components/forms/TourCodeForm';
 import Divider from '~components/Divider';
@@ -19,9 +19,10 @@ const CodeLoginScreen = ({navigation}) => {
   const [accessToken, setAccessToken] = useGlobalState('accessToken');
 
   const onSuccess = data => {
-    setLoggedIn(true);
     setCurrentUser(data.user);
     setAccessToken(data.access_token);
+    apiClient.setHeader('x-rot-auth-token', data.access_token);
+    setLoggedIn(true);
   };
 
   return (

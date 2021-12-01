@@ -4,12 +4,12 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import ScreenBase from '~components/layouts/ScreenBase';
 import colors from '~configs/colors';
 
-const ScreenFull = ({scrollViewProps, beforeView, afterView, alignment, children, ...props}) => {
+const ScreenFull = ({containerStyle, scrollViewProps, beforeView, afterView, alignment, children, ...props}) => {
   return (
     <ScreenBase wrapperStyle={styles.wrapper} {...props}>
       {beforeView}
       <ScrollView
-        contentContainerStyle={styles.view}
+        contentContainerStyle={[styles.view, containerStyle]}
         style={styles.scrollView}
         alwaysBounceVertical={false}
         keyboardShouldPersistTaps="handled"

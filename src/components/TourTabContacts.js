@@ -9,14 +9,17 @@ import Image from '~elements/Image';
 import Html from '~elements/Html';
 
 const TourTabContacts = ({tour, style, ...props}) => {
+  const contacts = tour.acf?.emergency_contacts || [];
+  console.log(tour.acf?.emergency_contacts);
+
   return (
     <View style={[styles.wrapper, style]} {...props}>
       <InfoBox heading="Tour Manager" evaluator={tour.acf.tour_manager}>
         <UserInfo user={tour.acf.tour_manager} />
       </InfoBox>
 
-      <InfoBox heading="Emergency Contacts" evaluator={tour.acf.emergency_contacts}>
-        {tour.acf.emergency_contacts.map((contact, index) => (
+      <InfoBox heading="Emergency Contacts" evaluator={contacts}>
+        {contacts.map((contact, index) => (
           <React.Fragment key={index}>
             <ContactInfo contact={contact} />
             {index < tour.acf.emergency_contacts.length - 1 && <Divider style={{marginVertical: 25}} />}

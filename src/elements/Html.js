@@ -6,6 +6,7 @@ const Html = ({evaluator, ...props}) => {
   if (evaluator && evaluator.length == 0) {
     return null;
   }
+
   return (
     <RenderHtml
       {...props}

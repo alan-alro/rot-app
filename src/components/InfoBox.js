@@ -6,7 +6,7 @@ import colors from '~configs/colors';
 import {dropShadow} from '~configs/styles';
 
 const InfoBox = ({style, heading, children, evaluator, ...props}) => {
-  if (evaluator === false || evaluator === undefined || (evaluator && evaluator.length == 0)) {
+  if (evaluator == false || evaluator === undefined || (evaluator && evaluator.length == 0)) {
     return null;
   }
 

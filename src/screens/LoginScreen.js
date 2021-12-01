@@ -19,10 +19,10 @@ const LoginScreen = ({navigation, route}) => {
   const [accessToken, setAccessToken] = useGlobalState('accessToken');
 
   const onSuccess = data => {
-    setLoggedIn(true);
     setCurrentUser(data.user);
     setAccessToken(data.access_token);
     apiClient.setHeader('x-rot-auth-token', data.access_token);
+    setLoggedIn(true);
   };
 
   const onSubmit = post => {
@@ -32,13 +32,13 @@ const LoginScreen = ({navigation, route}) => {
   return (
     <AuthScreen>
       <View style={styles.wrapper}>
-        <TextSmall>Some text here like "You do not have an account yet, create one to start."</TextSmall>
         <PasswordForm
           email={route.params.email}
           style={styles.form}
           onSubmit={onSubmit}
           onSuccess={onSuccess}
           submitText="Login"
+          passwordLabelText="Password:"
         />
         <Holder>
           <Link onPress={() => navigation.goBack()} style={styles.link} textStyle={styles.linkText}>

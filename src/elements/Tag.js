@@ -6,8 +6,8 @@ import colors from '~configs/colors';
 import themes from '~configs/themes';
 
 const Tag = ({children, style, textStyle, background, color, textProps, evaluator, ...props}) => {
-  if (evaluator && evaluator.length == 0) {
-    return;
+  if (evaluator == false || evaluator === undefined || (evaluator && evaluator.length == 0)) {
+    return null;
   }
 
   return (

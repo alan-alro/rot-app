@@ -6,7 +6,7 @@ import colors from '~configs/colors';
 import {dropShadow} from '~configs/styles';
 
 const InfoLine = ({style, value, heading, content, evaluator, ...props}) => {
-  if (evaluator && evaluator.length == 0) {
+  if (evaluator == false || evaluator === undefined || (evaluator && evaluator.length == 0)) {
     return null;
   }
 

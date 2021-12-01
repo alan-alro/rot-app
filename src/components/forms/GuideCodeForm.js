@@ -10,7 +10,7 @@ import InputPassword from '~elements/InputPassword';
 import Icon from '~elements/Icon';
 import TextError from '~elements/TextError';
 
-const TourCodeForm = ({style, onSuccess, ...props}) => {
+const GuideCodeForm = ({style, onSuccess, ...props}) => {
   const navigation = useNavigation();
   const [code, setCode] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -20,7 +20,7 @@ const TourCodeForm = ({style, onSuccess, ...props}) => {
     this.codeInput.blur();
     setIsLoading(true);
     setErrorMessage('');
-    const response = await Api('/auth/login_with_code', {code});
+    const response = await Api('/auth/login_as_guide', {code});
     setIsLoading(false);
 
     if (!response.success) {
@@ -33,7 +33,7 @@ const TourCodeForm = ({style, onSuccess, ...props}) => {
   return (
     <View style={[styles.wrapper, style]}>
       <Input
-        label="Tour Access Code:"
+        label="Guide Access Code:"
         value={code}
         onChange={setCode}
         setRef={input => (this.codeInput = input)}
@@ -61,4 +61,4 @@ const styles = EStyleSheet.create({
   wrapper: {},
 });
 
-export default TourCodeForm;
+export default GuideCodeForm;

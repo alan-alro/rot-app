@@ -1,27 +1,35 @@
 import React from 'react';
-import {View, Pressable} from 'react-native';
+import {View, Pressable, Linking} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {useNavigation} from '@react-navigation/native';
 import Text from '~elements/Text';
 import Icon from '~elements/Icon';
 
-const StreamItem = ({tourId, index, stream, style, ...props}) => {
-  const navigation = useNavigation();
+const ChatLinkItem = ({tour, type, style, ...props}) => {
+  let value = '';
 
-  const guides = stream.tour_guide || [];
+  switch (tour.chat_type.toLowerCase()) {
+    case 'whatsapp':
+      key = 'whatsapp_group_url';
+      break;
+    case 'signal':
+      key = 'signal_group_url';
+      break;
+    case 'facebook':
+      key = 'facebook_group_url';
+      break;
+  }
 
   return (
     <View style={[styles.wrapper, style]} {...props}>
-      <Text bold>{`Day ${stream.day_number}: ${stream.location}`}</Text>
-
-      {guides.length > 0 ? (
+      {tour[key] && tour[key].length > 0 ? (
         <View style={[styles.content]}>
           <View style={[styles.contentLeft]}>
-            <Text>Guides: {guides.map(guide => guide.tour_guide_name).join(', ')}</Text>
+            <Text>{tour.chat_type}</Text>
           </View>
           <View style={[styles.contentRight]}>
-            <Pressable onPress={() => navigation.navigate('RoomDetail', {tourId, index, stream})}>
-              <Icon name="volume-up" />
+            <Pressable onPress={async () => await Linking.openURL(tour[key])}>
+              <Text>{tour[key]}</Text>
             </Pressable>
           </View>
         </View>
@@ -48,4 +56,4 @@ const styles = EStyleSheet.create({
   },
 });
 
-export default StreamItem;
+export default ChatLinkItem;

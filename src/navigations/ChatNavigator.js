@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import PlaceholderScreen from '~screens/PlaceholderScreen';
+import ChatListsScreen from '~screens/ChatListsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,7 +11,7 @@ const ChatNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="ChatDetail" component={PlaceholderScreen} />
+      <Stack.Screen name="ChatLists" component={ChatListsScreen} />
     </Stack.Navigator>
   );
 };

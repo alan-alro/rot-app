@@ -27,17 +27,17 @@ const TourTabResources = ({tour, style, ...props}) => {
 
   return (
     <View style={[styles.wrapper, style]} {...props}>
-      <InfoBox heading="Tour Map" evaluator={tour.acf.tour_map_image_app?.sizes?.medium_large}>
-        <Image source={{uri: tour.acf.tour_map_image_app.sizes.medium_large}} />
+      <InfoBox heading="Tour Map" evaluator={tour.acf?.tour_map_image_app?.sizes?.medium_large}>
+        <Image source={{uri: tour.acf?.tour_map_image_app?.sizes?.medium_large}} />
       </InfoBox>
 
-      <InfoBox heading="Tour Gallery" evaluator={tour.acf.tour_gallery}>
-        <ImageGallery images={tour.acf.tour_gallery} />
+      <InfoBox heading="Tour Gallery" evaluator={tour.acf?.tour_gallery}>
+        <ImageGallery images={tour.acf?.tour_gallery} />
       </InfoBox>
 
-      <InfoBox heading="Tour Brochure" evaluator={tour.acf.tour_brochure}>
+      <InfoBox heading="Tour Brochure" evaluator={tour.acf?.tour_brochure}>
         <Pressable onPress={() => viewResource(tour.acf.tour_brochure.url)}>
-          <Image source={{uri: tour.acf.tour_brochure_image.sizes.medium_large}} />
+          <Image source={{uri: tour.acf?.tour_brochure_image?.sizes?.medium_large}} />
         </Pressable>
       </InfoBox>
 

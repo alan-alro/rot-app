@@ -1,17 +1,21 @@
 import React from 'react';
 import {Platform} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {useGlobalState, getGlobalState} from '~hooks/useGlobalContext';
 import ToursNavigator from '~navigations/ToursNavigator';
 import PlacesNavigator from '~navigations/PlacesNavigator';
 import ListenNavigator from '~navigations/ListenNavigator';
 import ChatNavigator from '~navigations/ChatNavigator';
 import MoreNavigator from '~navigations/MoreNavigator';
+import SpeakScreen from '~screens/SpeakScreen';
 import Icon from '~elements/Icon';
 import colors from '~configs/colors';
 
 const Tab = createBottomTabNavigator();
 
 const MainNavigator = () => {
+  const currentUser = getGlobalState('currentUser');
+
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
@@ -38,6 +42,9 @@ const MainNavigator = () => {
             case 'Listen':
               iconName = 'assistive-listening-systems';
               break;
+            case 'Speak':
+              iconName = 'volume-up';
+              break;
             case 'Chat':
               iconName = 'whatsapp';
               break;
@@ -55,9 +62,10 @@ const MainNavigator = () => {
       })}
     >
       <Tab.Screen name="Tours" component={ToursNavigator} />
-      <Tab.Screen name="Places" component={PlacesNavigator} />
-      <Tab.Screen name="Listen" component={ListenNavigator} />
-      <Tab.Screen name="Chat" component={ChatNavigator} />
+      {currentUser.user_type == 'user' && <Tab.Screen name="Places" component={PlacesNavigator} />}
+      {currentUser.user_type == 'user' && <Tab.Screen name="Listen" component={ListenNavigator} />}
+      {currentUser.user_type == 'tour_guide' && <Tab.Screen name="Speak" component={SpeakScreen} />}
+      {currentUser.user_type != 'tour_guide' && <Tab.Screen name="Chat" component={ChatNavigator} />}
       <Tab.Screen name="More" component={MoreNavigator} />
     </Tab.Navigator>
   );

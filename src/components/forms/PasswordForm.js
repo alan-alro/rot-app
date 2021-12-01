@@ -10,7 +10,7 @@ import InputPassword from '~elements/InputPassword';
 import Icon from '~elements/Icon';
 import TextError from '~elements/TextError';
 
-const PasswordForm = ({style, onSuccess, onSubmit, email, submitText, ...props}) => {
+const PasswordForm = ({style, onSuccess, onSubmit, email, passwordLabelText, submitText, ...props}) => {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +33,7 @@ const PasswordForm = ({style, onSuccess, onSubmit, email, submitText, ...props})
     <View style={[styles.wrapper, style]}>
       <InputEmail label="Email Address:" value={email} disabled={true} />
       <InputPassword
-        label="Password:"
+        label={passwordLabelText}
         value={password}
         onChange={setPassword}
         setRef={input => (this.passwordInput = input)}
