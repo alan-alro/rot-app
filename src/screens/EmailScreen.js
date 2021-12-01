@@ -7,6 +7,7 @@ import Divider from '~components/Divider';
 import Holder from '~components/Holder';
 import TextSmall from '~elements/TextSmall';
 import Button from '~elements/Button';
+import Link from '~elements/Link';
 import colors from '~configs/colors';
 
 const EmailScreen = ({navigation}) => {
@@ -21,12 +22,15 @@ const EmailScreen = ({navigation}) => {
   return (
     <AuthScreen>
       <View style={styles.wrapper}>
-        <TextSmall>Some text here like "enter your email address that's registered with your tour."</TextSmall>
+        {/*<TextSmall>Some text here like "enter your email address that's registered with your tour."</TextSmall>*/}
         <VerifyEmailForm style={styles.form} onSuccess={onSuccess} />
         <Divider style={styles.devider} color={colors.secondary} text="or" />
         <Holder>
           <Button onPress={() => navigation.navigate('CodeLogin')}>Login with tour code</Button>
           <Button onPress={() => navigation.navigate('GuideLogin')}>Login as guide</Button>
+        </Holder>
+        <Holder style={{marginTop: 20}}>
+          <Link onPress={() => navigation.navigate('LoginHelp')}>How to become a member?</Link>
         </Holder>
       </View>
     </AuthScreen>
