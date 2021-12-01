@@ -1,6 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import AudioPlayer from '~components/AudioPlayer';
 import Text from '~elements/Text';
 import Tags from '~elements/Tags';
 import Tag from '~elements/Tag';
@@ -25,6 +26,8 @@ const Itinerary = ({style, itinerary, ...props}) => {
       <Text textStyle={styles.heading} bold text={itinerary.location}></Text>
       <View style={styles.headingDecoration} />
       <Html source={{html: itinerary.description}} />
+
+      {itinerary.audio.length > 0 && <AudioPlayer mp3={itinerary.audio} />}
     </View>
   );
 };
